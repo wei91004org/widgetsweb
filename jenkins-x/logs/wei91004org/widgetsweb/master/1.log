@@ -1,0 +1,124 @@
+
+Showing logs for build [32mwei91004org-widgetsweb-master-vklnk-1[0m stage [32mfrom-build-pack[0m and container [32mstep-credential-initializer-wlwk6[0m
+{"level":"warn","ts":1583469393.3530145,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/0.8.0-**-support-backwards-incompats\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1583469393.3539538,"logger":"fallback-logger","caller":"creds-init/main.go:40","msg":"Credentials initialized."}
+
+Showing logs for build [32mwei91004org-widgetsweb-master-vklnk-1[0m stage [32mfrom-build-pack[0m and container [32mstep-working-dir-initializer-zbllp[0m
+{"level":"warn","ts":1583469394.099161,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/HEAD: no such file or directory"}
+{"level":"info","ts":1583469394.1018393,"logger":"fallback-logger","caller":"bash/main.go:64","msg":"Successfully executed command \"sh -c mkdir -p /workspace/source\"; output "}
+
+Showing logs for build [32mwei91004org-widgetsweb-master-vklnk-1[0m stage [32mfrom-build-pack[0m and container [32mstep-place-tools[0m
+
+Showing logs for build [32mwei91004org-widgetsweb-master-vklnk-1[0m stage [32mfrom-build-pack[0m and container [32mstep-git-source-wei91004org-widgetsweb-master-vklnk-7pw68[0m
+{"level":"warn","ts":1583469431.3267334,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/0.8.0-**-support-backwards-incompats\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1583469432.1372154,"logger":"fallback-logger","caller":"git/git.go:103","msg":"Successfully cloned https://github.com/wei91004org/widgetsweb.git @ v0.0.1 in path /workspace/source"}
+
+Showing logs for build [32mwei91004org-widgetsweb-master-vklnk-1[0m stage [32mfrom-build-pack[0m and container [32mstep-git-merge[0m
+Using SHAs from PULL_REFS=master:f8c33b2dcc5f5852cbfb992b5e1b8a1f04b7df38
+WARNING: no SHAs to merge, falling back to initial cloned commit
+
+Showing logs for build [32mwei91004org-widgetsweb-master-vklnk-1[0m stage [32mfrom-build-pack[0m and container [32mstep-setup-jx-git-credentials[0m
+Generated Git credentials file /workspace/xdg_config/git/credentials
+
+Showing logs for build [32mwei91004org-widgetsweb-master-vklnk-1[0m stage [32mfrom-build-pack[0m and container [32mstep-build-npmrc[0m
+Command "credential" is deprecated, it will be removed on Jun 1 2020.  This is replaced by Tekton's mounted secrets
+WARNING: failed to find Secret npm-token in namespace **
+
+Showing logs for build [32mwei91004org-widgetsweb-master-vklnk-1[0m stage [32mfrom-build-pack[0m and container [32mstep-build-npm-install[0m
+npm WARN REPLACE_ME@1.0.0 No repository field.
+npm WARN REPLACE_ME@1.0.0 No license field.
+
+added 54 packages from 42 contributors and audited 130 packages in 1.848s
+found 0 vulnerabilities
+
+
+Showing logs for build [32mwei91004org-widgetsweb-master-vklnk-1[0m stage [32mfrom-build-pack[0m and container [32mstep-build-npm-test[0m
+
+> REPLACE_ME@1.0.0 test /workspace/source
+> echo "no test specified" && exit 0
+
+no test specified
+
+Showing logs for build [32mwei91004org-widgetsweb-master-vklnk-1[0m stage [32mfrom-build-pack[0m and container [32mstep-build-container-build[0m
+[36mINFO[0m[0000] Downloading base image node:9-slim           
+ERROR: logging before flag.Parse: E0306 04:37:17.980794      11 metadata.go:142] while reading 'google-dockercfg' metadata: http status code: 404 while fetching url http://metadata.google.internal./computeMetadata/v1/instance/attributes/google-dockercfg
+ERROR: logging before flag.Parse: E0306 04:37:17.984523      11 metadata.go:159] while reading 'google-dockercfg-url' metadata: http status code: 404 while fetching url http://metadata.google.internal./computeMetadata/v1/instance/attributes/google-dockercfg-url
+2020/03/06 04:37:17 No matching credentials were found, falling back on anonymous
+[36mINFO[0m[0001] Error while retrieving image from cache: getting file info: stat /workspace/sha256:0e0175bbe4f8d9d104590d8d2c591017874e30977cb71aaff1cf6fa99479575c: no such file or directory 
+[36mINFO[0m[0001] Downloading base image node:9-slim           
+2020/03/06 04:37:18 No matching credentials were found, falling back on anonymous
+[36mINFO[0m[0001] Executing 0 build triggers                   
+[36mINFO[0m[0001] cmd: EXPOSE                                  
+[36mINFO[0m[0001] Adding exposed port: 8080/tcp                
+[36mINFO[0m[0001] Using files from context: [/workspace/source] 
+[36mINFO[0m[0001] Skipping unpacking as no commands require it. 
+[36mINFO[0m[0001] Taking snapshot of full filesystem...        
+[36mINFO[0m[0001] ENV PORT 8080                                
+[36mINFO[0m[0001] No files changed in this command, skipping snapshotting. 
+[36mINFO[0m[0001] EXPOSE 8080                                  
+[36mINFO[0m[0001] cmd: EXPOSE                                  
+[36mINFO[0m[0001] Adding exposed port: 8080/tcp                
+[36mINFO[0m[0001] No files changed in this command, skipping snapshotting. 
+[36mINFO[0m[0001] WORKDIR /usr/src/app                         
+[36mINFO[0m[0001] cmd: workdir                                 
+[36mINFO[0m[0001] Changed working directory to /usr/src/app    
+[36mINFO[0m[0001] Creating directory /usr/src/app              
+[36mINFO[0m[0001] Taking snapshot of files...                  
+[36mINFO[0m[0001] Using files from context: [/workspace/source] 
+[36mINFO[0m[0001] COPY . .                                     
+[36mINFO[0m[0002] Taking snapshot of files...                  
+[36mINFO[0m[0002] CMD ["npm", "start"]                         
+[36mINFO[0m[0002] No files changed in this command, skipping snapshotting. 
+2020/03/06 04:37:23 pushed blob: sha256:d9d32c18636ec18ffd6619f4e89da0a32340015b6aa9243bde9bfe5735cbebc9
+2020/03/06 04:37:23 pushed blob: sha256:9ab0b07e00a07300647b0324e3f0070763abfeb197df8ea344f99480cdb5fa92
+2020/03/06 04:37:23 pushed blob: sha256:7d083412657baa2dafba8d093034ef26f9ed2c90fb6ed95f76bb55aff03ed429
+2020/03/06 04:37:23 pushed blob: sha256:e01bd28a434b56ffd2a3fe9aa99b9b69aecca69904843edd30b1ee7150d79904
+2020/03/06 04:37:23 pushed blob: sha256:196b8e3c919d5639193ba6c6e54774528942041bbc37606631a2250502985c3c
+2020/03/06 04:37:23 pushed blob: sha256:aba97b8cfa9342b167566df90350f5234283b22b193380f9f2092e57cdb245c4
+2020/03/06 04:37:23 pushed blob: sha256:a88538b9cd05cfa611e43a25582a95ad7879f6fa708b0386a26b71ee62235bb3
+2020/03/06 04:37:24 pushed blob: sha256:5bba3ecb4cd6374a19da45f2a3db0a9c0804984358b3bb4b666c28944016e5ff
+2020/03/06 04:37:25 gcr.io/jenkinsx0305/widgetsweb:0.0.1: digest: sha256:13cf500c77d7a2ef62ae83eed834d1fabec68b74f59720fa3dcbb6dcb60a0900 size: 1406
+
+Showing logs for build [32mwei91004org-widgetsweb-master-vklnk-1[0m stage [32mfrom-build-pack[0m and container [32mstep-build-post-build[0m
+no CVE provider running in the current ** namespace so skip adding image to be analysed
+
+Showing logs for build [32mwei91004org-widgetsweb-master-vklnk-1[0m stage [32mfrom-build-pack[0m and container [32mstep-promote-changelog[0m
+Converted /workspace/source/charts/widgetsweb to an unshallow repository
+Generating change log from git ref 70d906be1b7cc9bf9b7fde553141a3d2ada0008c => 5702f2f2ec9f78b380277638dc646257052b60c5
+Associating user x-0 in users.jenkins.io with email wei_wu@optum.com to git GitProvider user with login -0 as emails match
+Adding label jenkins.io/git-github-userid=-0 to user x-0 in users.jenkins.io
+WARNING: Failed to enrich commit f8c33b2dcc5f5852cbfb992b5e1b8a1f04b7df38 with issues: User.jenkins.io "x-0" is invalid: metadata.labels: Invalid value: "-0": a valid label must be an empty string or consist of alphanumeric characters, '-', '_' or '.', and must start and end with an alphanumeric character (e.g. 'MyValue',  or 'my_value',  or '12345', regex used for validation is '(([A-Za-z0-9][-A-Za-z0-9_.]*)?[A-Za-z0-9])?')
+Finding issues in commit messages using git format
+WARNING: No release found for wei91004org/widgetsweb and tag v0.0.1 so creating a new release
+Updated the release information at https://github.com/wei91004org/widgetsweb/releases/tag/v0.0.1
+generated: /workspace/source/charts/widgetsweb/templates/release.yaml
+Created Release widgetsweb-0-0-1 resource in namespace **
+Updating PipelineActivity wei91004org-widgetsweb-master-1 with version 0.0.1
+Updated PipelineActivities wei91004org-widgetsweb-master-1 with release notes URL: https://github.com/wei91004org/widgetsweb/releases/tag/v0.0.1
+
+Showing logs for build [32mwei91004org-widgetsweb-master-vklnk-1[0m stage [32mfrom-build-pack[0m and container [32mstep-promote-helm-release[0m
+WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
+Adding missing Helm repo: storage.googleapis.com https://storage.googleapis.com/chartmuseum.jenkins-x.io
+Successfully added Helm repository storage.googleapis.com.
+Adding missing Helm repo: jenkins-x-chartmuseum http://jenkins-x-chartmuseum:8080
+Successfully added Helm repository jenkins-x-chartmuseum.
+WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
+Uploading chart file widgetsweb-0.0.1.tgz to http://jenkins-x-chartmuseum:8080/api/charts
+Received 201 response: {"saved":true}
+
+Showing logs for build [32mwei91004org-widgetsweb-master-vklnk-1[0m stage [32mfrom-build-pack[0m and container [32mstep-promote-jx-promote[0m
+WARNING: prow based install so skip waiting for the merge of Pull Requests to go green as currently there is an issue with gettingstatuses from the PR, see https://github.com/jenkins-x/**/issues/2410
+WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
+Promoting app widgetsweb version 0.0.1 to namespace **-staging
+WARNING: 
+WARNING: Waiting for the fork of ********/environment-wei91004-staging to appear...
+Forked Git repository to https://github.com/********/environment-wei91004-staging
+Created Pull Request: https://github.com/wei91004org/environment-wei91004-staging/pull/1
+Added label updatebot to Pull Request https://github.com/wei91004org/environment-wei91004-staging/pull/1
+got git provider status pending from PR https://github.com/wei91004org/environment-wei91004-staging/pull/1
+got git provider status pending from PR https://github.com/wei91004org/environment-wei91004-staging/pull/1
+got git provider status pending from PR https://github.com/wei91004org/environment-wei91004-staging/pull/1
+got git provider status pending from PR https://github.com/wei91004org/environment-wei91004-staging/pull/1
+Pull Request https://github.com/wei91004org/environment-wei91004-staging/pull/1 is merged at sha 6205ba8bd7cb21088bb89e074460e0ea0c1710b2
+Pull Request merged but we are not waiting for the update pipeline to complete!
+WARNING: Could not find the service URL in namespace **-staging for names widgetsweb, **-widgetsweb, **-staging-widgetsweb
